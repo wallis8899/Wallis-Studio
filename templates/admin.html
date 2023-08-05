@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='../static/css/bootstrap.css')}}">
+</head>
+<body class="bg-dark">
+	<h1 class="" style="color: white; font-family: fangsong;">Wallis Studio Admin</h1>
+
+		<form action="/Admin" method="POST" style="width: 50rem;">
+				<div class="mb-3">
+		  			<label for="exampleFormControlInput1" class="form-label">Title</label>
+		  			<input type="text" name="title"class="form-control" id="exampleFormControlInput1" placeholder="Title">
+					</div>
+					<label for="exampleFormControlInput1" class="form-label">Url</label>
+		  			<input type="text" name="url" class="form-control" id="exampleFormControlInput1" placeholder="Url">
+					</div>
+
+
+					<div class="mb-3">
+					  <label for="exampleFormControlTextarea1" class="form-label">Some Short Descripiton</label>
+					  <textarea class="form-control" name="desc" id="exampleFormControlTextarea1" rows="3"></textarea>
+					</div>
+
+
+					<div class="col-12">
+		    <input type="submit" class="btn btn-primary">
+		  </div>
+	</form>
+
+</body>
+</html>

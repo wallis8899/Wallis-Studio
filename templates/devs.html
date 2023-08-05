@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wallis Stuido</title>
+	<link href="../static/carousel.css" rel="stylesheet">
+<link href="../static/carousel.rtl.css" rel="stylesheet">
+<link href="../static/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet"  href="../static/features.css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: darkgreen;
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <script src="../static/js/bootstrap.js"></script>
+  </head>
+</head>
+<body class="bg-dark">
+	<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand mx-auto" href="#">Wallis Studio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">About</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <!---input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"--->
+          <a href="#">
+          <button class="btn btn-outline-success active" type="submit">Home</button>
+          </a>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container my-1">
+    <div class="bg-light rounded">
+      <div class="col-sm-8 py-5">
+        <h1 class="display-9 fw-normal">Wallis Studio</h1>
+        <p class="fs-5">Get all your gaming videos here and get to complete missions.</p>
+        <p>
+          <a class="btn btn-primary" href="#" role="button">Learn more about us»</a>
+        </p>
+    </div>
+    </div>
+  </div>
+
+  {% for data in vid%}
+   <br>
+   <div class="container" style="border-radius: 5rem;display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+">
+     <div class="row card" style="width: 25rem;"> 
+      <div class="card-body">
+          <iframe src="{{ data.Url }}" style="width: -webkit-fill-available;" allowfullscreen width="560" height="315"></iframe>
+          <h3 class="card-text">{{ data.Title }}</h3>
+          <a href="#" class="card-text">{{ data.Desc }}</a>
+    
+      </div>
+      </div>
+    </div>
+  {% endfor %}
+
+  </body>
+</html>
