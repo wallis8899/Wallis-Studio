@@ -1,5 +1,3 @@
-import streamlit as st
-from PIL import Image
 from sqlalchemy import create_engine,String,ForeignKey,Integer,Column
 from sqlalchemy.ext.declarative  import declarative_base
 from sqlalchemy.orm import sessionmaker
