@@ -31,5 +31,5 @@ def admin():
 
 
 
-app.run(host=44.227.217.144", port=80)
+app.run(host="0.0.0.0", port=80)
 
