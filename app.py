@@ -23,6 +23,7 @@ def admin():
 				session.close()
 			except Exception:
 				session.merge(data_send)
+				session.commit()
 				session.close()
 
 		else:
